@@ -126,6 +126,17 @@ def sign_and_parity(num):
 
 sign_and_parity(5)
 
+# Part Two
+def full_title(name, job_title="Engineer"):
+    return job_title, name
+
+
+def write_letter(recipient, job_title, sender):
+    print "Dear {}, I think you are amazing!\n \
+            Sincerely, {}".format(full_title(job_title, recipient), sender)
+
+
+
 
 
 ###############################################################################
