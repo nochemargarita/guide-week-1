@@ -68,7 +68,7 @@ def hello_world():
 
 
 def say_hi(name):
-    print "Hi, {}!".format(name)
+    print "Hi {}".format(name)
 
 
 def print_product(num1, num2):
@@ -76,17 +76,18 @@ def print_product(num1, num2):
 
 
 def repeat_string(word, multiplier):
-    while multiplier > 0:
-        print word,
-        multiplier -= 1
+    print word * multiplier
 
 
 def print_sign(num):
-    if num < 0:
+    if num == 0:
+        print "Zero"
+
+    elif num < 0:
         print "Lower than 0"
 
     else:
-        print "higher than 0"
+        print "Higher than 0"
 
 
 def is_divisible_by_three(num):
@@ -119,8 +120,6 @@ def sign_and_parity(num):
 
     sign, parity = num_description
 
-    print sign
-    print parity
 
     return num_description
 
@@ -128,12 +127,11 @@ sign_and_parity(5)
 
 # Part Two
 def full_title(name, job_title="Engineer"):
-    return job_title, name
+    return "{} {}".format(job_title, name)
 
 
-def write_letter(recipient, job_title, sender):
-    print "Dear {}, I think you are amazing!\n \
-            Sincerely, {}".format(full_title(job_title, recipient), sender)
+def write_letter(job_title, recipient, sender):
+    print "Dear {}, I think you are amazing! Sincerely, {}".format(full_title(job_title, recipient), sender)
 
 
 
